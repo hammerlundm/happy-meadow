@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Lively Meadow (Song Loop) B 118.wav-226d9efeb57101de1b908566a9de568f.sample"
+
+[deps]
+
+source_file="res://Lively Meadow (Song Loop) B 118.wav"
+dest_files=[ "res://.import/Lively Meadow (Song Loop) B 118.wav-226d9efeb57101de1b908566a9de568f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

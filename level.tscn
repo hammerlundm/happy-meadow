@@ -1,0 +1,4737 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://level.gd" type="Script" id=1]
+[ext_resource path="res://platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Lively Meadow (Song Loop) B 118.wav" type="AudioStream" id=4]
+[ext_resource path="res://Grass.png" type="Texture" id=5]
+[ext_resource path="res://Flower1.png" type="Texture" id=6]
+[ext_resource path="res://Flower2.png" type="Texture" id=7]
+[ext_resource path="res://Flower3.png" type="Texture" id=8]
+[ext_resource path="res://bush.tscn" type="PackedScene" id=9]
+[ext_resource path="res://npc1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://npc2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://npc3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://npc4.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Cloud.png" type="Texture" id=14]
+[ext_resource path="res://picnic blanket.png" type="Texture" id=15]
+
+[node name="level" type="Node" index="0"]
+
+script = ExtResource( 1 )
+TIME = 0.5
+
+[node name="platform" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="platform2" parent="." index="1" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8091, 0, 0 )
+
+[node name="platform3" parent="." index="2" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6654, 0, 0 )
+
+[node name="player" parent="." index="3" instance=ExtResource( 3 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.999345, 0 )
+SPEED = 20.0
+FRICTION = 20.0
+GRAVITY = 200.0
+JUMP = 4000.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="grass" type="Sprite3D" parent="." index="5"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77469, 0.898272, -2.24811 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass39" type="Sprite3D" parent="." index="6"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77469, 0.898272, 0.803097 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass44" type="Sprite3D" parent="." index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.47924, 0.898272, 3.17511 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass46" type="Sprite3D" parent="." index="8"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38649, 0.898272, 4.88853 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass51" type="Sprite3D" parent="." index="9"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.1423, 0.898272, 4.88853 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass58" type="Sprite3D" parent="." index="10"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.94942, 0.898272, 2.54685 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass65" type="Sprite3D" parent="." index="11"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.49026, 0.898272, -0.434434 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass70" type="Sprite3D" parent="." index="12"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7952, 0.898272, -0.434434 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass74" type="Sprite3D" parent="." index="13"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7952, 0.898272, 3.92394 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass79" type="Sprite3D" parent="." index="14"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7933, 0.898272, 1.60148 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass83" type="Sprite3D" parent="." index="15"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8923, 0.898272, -1.67137 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass88" type="Sprite3D" parent="." index="16"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9212, 0.898272, 3.1076 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass31" type="Sprite3D" parent="." index="17"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77469, 0.898272, -1.2284 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass37" type="Sprite3D" parent="." index="18"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77469, 0.898272, 1.82281 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass43" type="Sprite3D" parent="." index="19"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.47924, 0.898272, 4.19482 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass48" type="Sprite3D" parent="." index="20"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38649, 0.898272, 5.90824 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass52" type="Sprite3D" parent="." index="21"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.1423, 0.898272, 5.90824 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass64" type="Sprite3D" parent="." index="22"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.49026, 0.898272, 0.585275 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass69" type="Sprite3D" parent="." index="23"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7952, 0.898272, 0.585275 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass73" type="Sprite3D" parent="." index="24"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7952, 0.898272, 4.94365 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass78" type="Sprite3D" parent="." index="25"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7933, 0.898272, 2.62119 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass82" type="Sprite3D" parent="." index="26"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8923, 0.898272, -0.651655 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass87" type="Sprite3D" parent="." index="27"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9212, 0.898272, 4.12731 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass11" type="Sprite3D" parent="." index="28"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.76271, 0.898272, -2.24811 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass30" type="Sprite3D" parent="." index="29"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.1923, 0.898272, -2.24811 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass2" type="Sprite3D" parent="." index="30"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22147, 1.00737, -1.33182 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass40" type="Sprite3D" parent="." index="31"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22147, 1.00737, 1.71939 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass41" type="Sprite3D" parent="." index="32"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516918, 1.00737, 4.0914 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass49" type="Sprite3D" parent="." index="33"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.609675, 1.00737, 5.80482 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass53" type="Sprite3D" parent="." index="34"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1385, 1.00737, 5.80482 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass67" type="Sprite3D" parent="." index="35"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.7914, 1.00737, 0.481855 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass71" type="Sprite3D" parent="." index="36"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.7914, 1.00737, 4.84023 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass76" type="Sprite3D" parent="." index="37"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7895, 1.00737, 2.51777 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass85" type="Sprite3D" parent="." index="38"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8885, 1.00737, -0.755075 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass90" type="Sprite3D" parent="." index="39"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.9174, 1.00737, 4.02389 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass32" type="Sprite3D" parent="." index="40"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05797, 1.00737, -1.37439 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass36" type="Sprite3D" parent="." index="41"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05797, 1.00737, 1.67682 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass42" type="Sprite3D" parent="." index="42"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35342, 1.00737, 4.04884 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass50" type="Sprite3D" parent="." index="43"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.44618, 1.00737, 5.76225 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass55" type="Sprite3D" parent="." index="44"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.975, 1.00737, 5.76225 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass59" type="Sprite3D" parent="." index="45"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7821, 1.00737, 3.42058 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass68" type="Sprite3D" parent="." index="46"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6279, 1.00737, 0.439291 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass91" type="Sprite3D" parent="." index="47"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.7831, 1.00737, 0.439291 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass92" type="Sprite3D" parent="." index="48"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.7911, 1.00737, 1.97876 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass93" type="Sprite3D" parent="." index="49"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9498, 1.00737, 5.0069 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass72" type="Sprite3D" parent="." index="50"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6279, 1.00737, 4.79766 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass77" type="Sprite3D" parent="." index="51"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.626, 1.00737, 2.4752 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass81" type="Sprite3D" parent="." index="52"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.725, 1.00737, -0.79764 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass86" type="Sprite3D" parent="." index="53"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.7539, 1.00737, 3.98132 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass12" type="Sprite3D" parent="." index="54"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0156918, 1.00737, -1.23642 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass38" type="Sprite3D" parent="." index="55"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0156918, 1.00737, 1.81479 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass45" type="Sprite3D" parent="." index="56"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.72024, 1.00737, 4.1868 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass47" type="Sprite3D" parent="." index="57"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62748, 1.00737, 5.90022 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass54" type="Sprite3D" parent="." index="58"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9013, 1.00737, 5.90022 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass66" type="Sprite3D" parent="." index="59"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5542, 1.00737, 0.577255 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass75" type="Sprite3D" parent="." index="60"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5542, 1.00737, 4.93563 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass80" type="Sprite3D" parent="." index="61"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5523, 1.00737, 2.61317 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass84" type="Sprite3D" parent="." index="62"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6513, 1.00737, -0.659676 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass89" type="Sprite3D" parent="." index="63"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6802, 1.00737, 4.11928 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass26" type="Sprite3D" parent="." index="64"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.1885, 1.00737, 3.59623 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass3" type="Sprite3D" parent="." index="65"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.83374, 1.00737, -4.1757 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass33" type="Sprite3D" parent="." index="66"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.83374, 1.00737, -4.1757 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass13" type="Sprite3D" parent="." index="67"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3712, 1.00737, -4.1757 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass25" type="Sprite3D" parent="." index="68"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8008, 1.00737, -4.1757 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass4" type="Sprite3D" parent="." index="69"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.03984, 1.00737, -5.02708 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 1
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass34" type="Sprite3D" parent="." index="70"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.03984, 1.00737, -5.02708 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 1
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass14" type="Sprite3D" parent="." index="71"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5772, 1.00737, -4.8491 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 1
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass27" type="Sprite3D" parent="." index="72"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0069, 1.00737, -5.02708 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 1
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass5" type="Sprite3D" parent="." index="73"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.49728, 1.00737, -4.75156 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass35" type="Sprite3D" parent="." index="74"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.49728, 1.00737, 0.543876 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass15" type="Sprite3D" parent="." index="75"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.04013, 1.00737, -4.75156 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass28" type="Sprite3D" parent="." index="76"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4698, 1.00737, -4.75156 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass6" type="Sprite3D" parent="." index="77"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7888, 1.00737, -3.38611 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass16" type="Sprite3D" parent="." index="78"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.74861, 1.00737, -3.38611 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass29" type="Sprite3D" parent="." index="79"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.1782, 1.00737, -3.38611 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass7" type="Sprite3D" parent="." index="80"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20788, 1.00737, -4.57444 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass17" type="Sprite3D" parent="." index="81"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3295, 1.00737, -4.57444 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass21" type="Sprite3D" parent="." index="82"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7592, 1.00737, -4.57444 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass8" type="Sprite3D" parent="." index="83"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368627, 1.00737, -2.58347 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass23" type="Sprite3D" parent="." index="84"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3357, 1.00737, -2.58347 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass9" type="Sprite3D" parent="." index="85"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.09516, 1.00737, -3.98525 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass19" type="Sprite3D" parent="." index="86"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6326, 1.00737, -3.98525 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass24" type="Sprite3D" parent="." index="87"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0622, 1.00737, -3.98525 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass10" type="Sprite3D" parent="." index="88"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.10058, 1.00737, -2.95702 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass20" type="Sprite3D" parent="." index="89"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.638, 1.00737, -2.95702 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="grass22" type="Sprite3D" parent="." index="90"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0676, 1.00737, -2.95702 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.05
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower" type="Sprite3D" parent="." index="91"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.24659, 0.898692, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower12" type="Sprite3D" parent="." index="92"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1244, 0.898692, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower6" type="Sprite3D" parent="." index="93"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52884, 0.898692, 0.774129 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower10" type="Sprite3D" parent="." index="94"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4067, 0.898692, 0.774129 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower15" type="Sprite3D" parent="." index="95"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.8238, 0.898692, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower16" type="Sprite3D" parent="." index="96"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1061, 0.898692, 0.774129 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower2" type="Sprite3D" parent="." index="97"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91613, 0.898692, -3.3745 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower9" type="Sprite3D" parent="." index="98"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.794, 0.898692, -3.3745 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower13" type="Sprite3D" parent="." index="99"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0762, 0.898692, -2.60037 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower14" type="Sprite3D" parent="." index="100"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.4934, 0.898692, -3.3745 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="yellow_flower11" type="Sprite3D" parent="." index="101"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.7756, 0.898692, -2.60037 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 4
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower" type="Sprite3D" parent="." index="102"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.79032, 0.685366, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower10" type="Sprite3D" parent="." index="103"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50808, 0.685366, 0.774129 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower24" type="Sprite3D" parent="." index="104"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7869, 0.685366, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower12" type="Sprite3D" parent="." index="105"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19134, 0.685366, 0.774129 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower23" type="Sprite3D" parent="." index="106"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0692, 0.685366, 0.774129 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower3" type="Sprite3D" parent="." index="107"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.79032, 0.685366, 4.58277 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower8" type="Sprite3D" parent="." index="108"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50808, 0.685366, 5.3569 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower5" type="Sprite3D" parent="." index="109"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9091, 0.685366, 4.58277 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower21" type="Sprite3D" parent="." index="110"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7869, 0.685366, 4.58277 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower11" type="Sprite3D" parent="." index="111"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19134, 0.685366, 5.3569 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower19" type="Sprite3D" parent="." index="112"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0692, 0.685366, 5.3569 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower2" type="Sprite3D" parent="." index="113"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.12079, 0.685366, -3.3745 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower7" type="Sprite3D" parent="." index="114"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.161454, 0.685366, -2.60037 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower22" type="Sprite3D" parent="." index="115"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0393, 0.685366, -2.60037 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower4" type="Sprite3D" parent="." index="116"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.57863, 0.685366, -3.3745 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower15" type="Sprite3D" parent="." index="117"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.4565, 0.685366, -3.3745 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower9" type="Sprite3D" parent="." index="118"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.86088, 0.685366, -2.60037 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="blue_flower17" type="Sprite3D" parent="." index="119"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7387, 0.685366, -2.60037 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 4
+frame = 2
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower" type="Sprite3D" parent="." index="120"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3567, 0.72258, 3.6166 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower7" type="Sprite3D" parent="." index="121"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.925542, 0.72258, 4.39073 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower14" type="Sprite3D" parent="." index="122"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8034, 0.72258, 4.39073 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower4" type="Sprite3D" parent="." index="123"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.34272, 0.72258, 3.6166 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower15" type="Sprite3D" parent="." index="124"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2206, 0.72258, 3.6166 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower8" type="Sprite3D" parent="." index="125"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.62496, 0.72258, 4.39073 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower16" type="Sprite3D" parent="." index="126"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5028, 0.72258, 4.39073 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower2" type="Sprite3D" parent="." index="127"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.312831, 0.72258, 0.242105 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower6" type="Sprite3D" parent="." index="128"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59507, 0.72258, 1.01623 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower12" type="Sprite3D" parent="." index="129"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4729, 0.72258, 1.01623 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower9" type="Sprite3D" parent="." index="130"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.8901, 0.72258, 0.242105 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="red_flower11" type="Sprite3D" parent="." index="131"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.1723, 0.72258, 1.01623 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.025
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 4
+frame = 3
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Animation" ]
+
+[node name="bush" parent="." index="132" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22147, 1.00737, -6.12859 )
+
+[node name="bush71" parent="." index="133" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49197, 1.00737, 6.50492 )
+
+[node name="bush27" parent="." index="134" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2605, 1.00737, -6.12859 )
+
+[node name="bush54" parent="." index="135" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.531, 1.00737, 6.50492 )
+
+[node name="bush28" parent="." index="136" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4483, 1.00737, -6.12859 )
+
+[node name="bush58" parent="." index="137" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.7188, 1.00737, 6.50492 )
+
+[node name="bush37" parent="." index="138" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5621, 1.00737, -6.12859 )
+
+[node name="bush86" parent="." index="139" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8326, 1.00737, 6.50492 )
+
+[node name="bush2" parent="." index="140" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.737171, 1.00737, -6.12859 )
+
+[node name="bush66" parent="." index="141" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0076766, 1.00737, 6.50492 )
+
+[node name="bush22" parent="." index="142" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7762, 1.00737, -6.12859 )
+
+[node name="bush55" parent="." index="143" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0467, 1.00737, 6.50492 )
+
+[node name="bush29" parent="." index="144" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.964, 1.00737, -6.12859 )
+
+[node name="bush74" parent="." index="145" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2345, 1.00737, 6.50492 )
+
+[node name="bush38" parent="." index="146" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0778, 1.00737, -6.12859 )
+
+[node name="bush77" parent="." index="147" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3483, 1.00737, 6.50492 )
+
+[node name="bush3" parent="." index="148" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.820814, 1.00737, -6.12859 )
+
+[node name="bush67" parent="." index="149" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55031, 1.00737, 6.50492 )
+
+[node name="bush23" parent="." index="150" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2182, 1.00737, -6.12859 )
+
+[node name="bush72" parent="." index="151" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4887, 1.00737, 6.50492 )
+
+[node name="bush36" parent="." index="152" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.406, 1.00737, -6.12859 )
+
+[node name="bush85" parent="." index="153" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.6765, 1.00737, 6.50492 )
+
+[node name="bush45" parent="." index="154" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5198, 1.00737, -6.12859 )
+
+[node name="bush4" parent="." index="155" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.26456, 1.00737, -6.12859 )
+
+[node name="bush68" parent="." index="156" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.99406, 1.00737, 6.50492 )
+
+[node name="bush24" parent="." index="157" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.77442, 1.00737, -6.12859 )
+
+[node name="bush64" parent="." index="158" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.04493, 1.00737, 6.50492 )
+
+[node name="bush35" parent="." index="159" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9623, 1.00737, -6.12859 )
+
+[node name="bush84" parent="." index="160" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2328, 1.00737, 6.50492 )
+
+[node name="bush44" parent="." index="161" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.076, 1.00737, -6.12859 )
+
+[node name="bush76" parent="." index="162" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3465, 1.00737, 6.50492 )
+
+[node name="bush5" parent="." index="163" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58755, 1.00737, -6.12859 )
+
+[node name="bush69" parent="." index="164" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.31705, 1.00737, 6.50492 )
+
+[node name="bush25" parent="." index="165" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.45143, 1.00737, -6.12859 )
+
+[node name="bush57" parent="." index="166" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.72194, 1.00737, 6.50492 )
+
+[node name="bush31" parent="." index="167" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6393, 1.00737, -6.12859 )
+
+[node name="bush80" parent="." index="168" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9098, 1.00737, 6.50492 )
+
+[node name="bush40" parent="." index="169" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.753, 1.00737, -6.12859 )
+
+[node name="bush88" parent="." index="170" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0236, 1.00737, 6.50492 )
+
+[node name="bush6" parent="." index="171" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.79118, 1.00737, -6.12859 )
+
+[node name="bush70" parent="." index="172" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.52067, 1.00737, 6.50492 )
+
+[node name="bush26" parent="." index="173" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2478, 1.00737, -6.12859 )
+
+[node name="bush62" parent="." index="174" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.51831, 1.00737, 6.50492 )
+
+[node name="bush33" parent="." index="175" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4357, 1.00737, -6.12859 )
+
+[node name="bush82" parent="." index="176" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7062, 1.00737, 6.50492 )
+
+[node name="bush42" parent="." index="177" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5494, 1.00737, -6.12859 )
+
+[node name="bush78" parent="." index="178" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8199, 1.00737, 6.50492 )
+
+[node name="bush7" parent="." index="179" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.50324, 1.00737, -6.12859 )
+
+[node name="bush59" parent="." index="180" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77375, 1.00737, 6.50492 )
+
+[node name="bush19" parent="." index="181" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5422, 1.00737, -6.12859 )
+
+[node name="bush63" parent="." index="182" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8127, 1.00737, 6.50492 )
+
+[node name="bush34" parent="." index="183" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7301, 1.00737, -6.12859 )
+
+[node name="bush43" parent="." index="184" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8438, 1.00737, -6.12859 )
+
+[node name="bush75" parent="." index="185" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1143, 1.00737, 6.50492 )
+
+[node name="bush8" parent="." index="186" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76172, 1.00737, -6.12859 )
+
+[node name="bush61" parent="." index="187" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.03223, 1.00737, 6.50492 )
+
+[node name="bush20" parent="." index="188" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8007, 1.00737, -6.12859 )
+
+[node name="bush56" parent="." index="189" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8318, 1.00737, 6.50492 )
+
+[node name="bush30" parent="." index="190" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9886, 1.00737, -6.12859 )
+
+[node name="bush79" parent="." index="191" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0906, 1.00737, 6.50492 )
+
+[node name="bush39" parent="." index="192" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1023, 1.00737, -6.12859 )
+
+[node name="bush87" parent="." index="193" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1655, 1.00737, 6.50492 )
+
+[node name="bush9" parent="." index="194" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94926, 1.00737, -6.12859 )
+
+[node name="bush65" parent="." index="195" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.21977, 1.00737, 6.50492 )
+
+[node name="bush21" parent="." index="196" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9882, 1.00737, -6.12859 )
+
+[node name="bush60" parent="." index="197" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2588, 1.00737, 6.50492 )
+
+[node name="bush32" parent="." index="198" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1761, 1.00737, -6.12859 )
+
+[node name="bush81" parent="." index="199" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.0646, 1.00737, 6.50492 )
+
+[node name="bush41" parent="." index="200" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2899, 1.00737, -6.12859 )
+
+[node name="bush89" parent="." index="201" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8279, 1.00737, 6.50492 )
+
+[node name="bush11" parent="." index="202" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.04106, 1.00737, -6.12859 )
+
+[node name="bush91" parent="." index="203" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5414, 1.00737, -6.12859 )
+
+[node name="bush113" parent="." index="204" instance=ExtResource( 9 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5414, 1.00737, -6.04503 )
+
+[node name="bush10" parent="." index="205" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, -5.81003 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush92" parent="." index="206" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, -5.81003 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush123" parent="." index="207" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, -3.45069 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush46" parent="." index="208" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, -3.54121 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush12" parent="." index="209" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, -4.5788 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush93" parent="." index="210" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, -4.5788 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush112" parent="." index="211" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, -4.49524 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush47" parent="." index="212" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, -2.30998 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush100" parent="." index="213" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, -2.30998 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush13" parent="." index="214" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, -3.17384 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush94" parent="." index="215" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, -1.27979 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush48" parent="." index="216" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, -0.905016 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush14" parent="." index="217" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, -1.75731 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush115" parent="." index="218" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, -0.134546 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush49" parent="." index="219" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, 0.511512 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush118" parent="." index="220" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, 1.82907 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush15" parent="." index="221" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, -0.488378 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush50" parent="." index="222" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, 1.78044 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush16" parent="." index="223" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, 0.900309 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush97" parent="." index="224" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, 0.900309 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush109" parent="." index="225" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, 0.983863 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush51" parent="." index="226" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, 3.16913 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush17" parent="." index="227" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, 2.18687 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush52" parent="." index="228" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, 4.45569 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush120" parent="." index="229" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, 4.55901 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush18" parent="." index="230" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, 3.47586 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush99" parent="." index="231" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, 2.82577 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush107" parent="." index="232" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, 3.55941 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush53" parent="." index="233" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -6.14508, 1.00737, 5.74468 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush106" parent="." index="234" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, 5.74468 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush122" parent="." index="235" instance=ExtResource( 9 )]
+
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 31.4374, 1.00737, 5.82823 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="npc" parent="." index="236" instance=ExtResource( 10 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1548, 1.39855, 1.71719 )
+
+[node name="npc5" parent="." index="237" instance=ExtResource( 10 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.66854, -1.85884, -3.10779 )
+
+[node name="npc2" parent="." index="238" instance=ExtResource( 11 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5578, 1.33804, 2.75975 )
+
+[node name="npc3" parent="." index="239" instance=ExtResource( 12 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0585, 1.33482, 0 )
+
+[node name="npc4" parent="." index="240" instance=ExtResource( 13 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.804, 1.23441, 0 )
+
+[node name="cloud" type="Sprite3D" parent="." index="241"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2916, 8.03793, -14.5104 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.1
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 14 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="cloud2" type="Sprite3D" parent="." index="242"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.18145, 8.13318, -18.9143 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.1
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 14 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="cloud3" type="Sprite3D" parent="." index="243"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9836, 2.09349, -11.1389 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.1
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 14 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="cloud4" type="Sprite3D" parent="." index="244"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53046, 6.00218, -13.5387 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.1
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 14 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+[node name="Sprite3D" type="Sprite3D" parent="." index="245"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8466, 0.0457046, 0.859841 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.1
+axis = 1
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 15 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+
+
